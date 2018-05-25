@@ -1,0 +1,212 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <style>
+    h1 {color:greenyellow;}
+    body {background-color:black;}
+    #game {
+        background-color: rgb(155, 155, 241);
+    }
+    #show-timer {
+        color: greenyellow;
+    }
+    </style>
+</head>
+<body>
+    <h1>Space Trivia</h1>
+    <div class = "wrapper">
+        <div id="show-timer"></div>
+        <button id = "playbtn">PLAY!</button>
+        <div id="game">
+            <div id="question1">days on venus are quite long, about 243 earth days per single rotaion</div>
+            <button  id="answer1a">true</button>
+            <button id ="answer1b">false</button>
+            <div id ="question2">the sun is so massive that it would take an estimated 3.5 million earths to take up the same amount of space</div>
+            <button id = "answer2a">true</button>
+            <button id = "answer2b">false</button>
+            <div id = "question3">mercury is the hottest planet in the solar system because it is closest to the sun</div>
+            <button id = "answer3a">true</button>
+            <button id = "answer3b">false</button>
+            <div id = "question4">The furthest manmade object is Voyager 1. It has messages for aliens on-board</div>
+            <button id = "answer4a">true</button>
+            <button id = "answer4b">false</button>
+            <div id = "question5">The moon is a small planet that was captured by the Earth while passing through its orbit</div>
+            <button id = "answer5a">true</button>
+            <button id = "answer5b">false</button>
+            <div id = "question6">The word galaxy is derived from the Greek word "galaxias," meaning "milky" </div>
+            <button id = "answer6a">true</button>
+            <button id = "answer6b">false</button>
+            <div id = "question7">The sun travels around the galaxy once every 2 million earth years.</div>
+            <button id = "answer7a">true</button>
+            <button id = "answer7b">false</button>
+            <div id = "question8">The nearest blackhole to earth is 1600 lightyears away</div>
+            <button id = "answer8a">true</button>
+            <button id = "answer8b">false</button>
+            <div id = "question9">Every year the moon gets about 4 centimeters farther from the Earth</div>
+            <button id = "answer9a">true</button>
+            <button id = "answer9b">false</button>
+            <div id = "question10">The cosmic background temperature of space is -2,700 degrees celsius</div>
+            <button id = "answer10a">true</button>
+            <button id = "answer10b">false</button>
+        </div>
+       
+
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    var number = 60;
+    var intervalId;
+    var answersCorrect = 0
+    var answersIncorrect = 0
+
+            
+
+
+
+       
+    $("#playbtn").on("click",run);
+
+    function run(){
+        intervalId = setInterval(decrement, 1000);
+    }
+    function decrement(){
+        number--;
+
+      $("#show-timer").html("<h2>" + number + "</h2>");
+      $("#questions").html
+
+      if (number === 0) {
+
+        stop();
+
+        alert("Time Up!");
+
+      }
+    }
+    function stop() {
+
+clearInterval(intervalId);
+
+}
+    
+$("#answer1a").on("click",getAnswer1a)
+function getAnswer1a() {
+  questionOne = true 
+  console.log(questionOne);
+}
+  $("#answer1b").on("click",getAnswer1b)
+function getAnswer1b() {
+  questionOne = false 
+  console.log(questionOne);
+}   
+$("#answer2a").on("click",getAnswer2a);
+function getAnswer2a() {
+  questionTwo = true 
+  console.log(questionTwo);
+}  ;    
+$("#answer2b").on("click",getAnswer2b);
+function getAnswer2b() {
+  questionTwo = false
+  console.log(questionTwo);
+}  ;    
+$("#answer3a").on("click",getAnswer3a);
+function getAnswer3a() {
+  questionThree = true 
+  console.log(questionThree);
+}  ;
+$("#answer3b").on("click",getAnswer3b);
+function getAnswer3b() {
+  questionThree = false
+  console.log(questionThree);
+}  ;
+$("#answer4a").on("click",getAnswer4a);
+function getAnswer4a() {
+  questionFour = true 
+  console.log(questionFour);
+}  ;
+$("#answer4b").on("click",getAnswer4b);
+function getAnswer4b() {
+  questionFour = false 
+  console.log(questionFour);
+}  ;
+$("#answer5a").on("click",getAnswer5a);
+function getAnswer5a() {
+  questionFive = true 
+  console.log(questionFive);
+}  ;
+
+$("#answer5b").on("click",getAnswer5b);
+function getAnswer5b() {
+  questionFive = false 
+  console.log(questionFive);
+}  ;
+
+$("#answer6a").on("click",getAnswer6a);
+function getAnswer6a() {
+  questionSix = true 
+  console.log(questionSix);
+}  ;
+
+$("#answer6b").on("click",getAnswer6b);
+function getAnswer6b() {
+  questionSix = false
+  console.log(questionSix);
+}  ; 
+ 
+$("#answer7a").on("click",getAnswer7a);
+function getAnswer7a() {
+  questionSeven = true 
+  console.log(questionSeven);
+}  ; 
+$("#answer7b").on("click",getAnswer7b);
+function getAnswer7b() {
+  questionSeven = false 
+  console.log(questionSeven);
+}  ; 
+$("#answer8a").on("click",getAnswer8a);
+function getAnswer8a() {
+  questionEight = true 
+  console.log(questionEight);
+}  ;
+$("#answer8b").on("click",getAnswer8b);
+function getAnswer8b() {
+  questionEight = false
+  console.log(questionEight);
+}  ;
+$("#answer9a").on("click",getAnswer9a);
+function getAnswer9a() {
+  questionNine = true
+  console.log(questionNine);
+}  ;
+$("#answer9b").on("click",getAnswer9b);
+function getAnswer9b() {
+  questionNine = false
+  console.log(questionNine);
+}  ;
+$("#answer10a").on("click",getAnswer10a);
+function getAnswer10a() {
+  questionTen = true 
+  console.log(questionTen);
+}  ;
+$("#answer10b").on("click",getAnswer10b);
+function getAnswer10b() {
+  questionTen = false
+    console.log(questionTen);
+}  ;
+
+
+
+
+
+
+ 
+ 
+    </script>
+</body>
+</html>
+
