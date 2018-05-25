@@ -1,0 +1,7 @@
+h1 {color:greenyellow;}
+    body {background-color:black;}
+    #game {
+        background-color: rgb(155, 155, 241);
+    }
+    #show-timer {
+        color: greenyellow;
